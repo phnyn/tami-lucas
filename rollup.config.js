@@ -41,13 +41,12 @@ export default [{
             ]
         }),
         json(),
-            copy({
-      targets: [
-        { src: 'index.html', dest: 'public/' },
-        { src: 'assets/images/**/*', dest: 'public/images' },
-        { src: 'assets/fonts/**/*', dest: 'public/fonts' }
-      ]
-    }),
+        copy({
+            targets: [
+                { src: 'assets/SVG/*', dest: 'public/SVG' },
+                { src: 'assets/Fonts/*', dest: 'public/Fonts' }
+            ]
+        }),
         resolve({
             preferBuiltins: false,
             browser: true
