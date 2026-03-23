@@ -5,27 +5,10 @@ block config
     - var activePage = "startseite";
 
 block content
+    h1 hey ho
     +section("fadeInUp-animation")(id="location")
-        include components/c.location.pug
+        include components/c.location.pug 
     +section("fadeInUp-animation")(id="information")
         include components/c.teaserGrid.pug
     +section("fadeInUp-animation")(id="grid")
         include components/c.zeitplan.pug
-    //- +section#gift
-    //-     include components/c.wunschliste.pug
-    //- +section#countdown
-    //-     h2 Countdown 
-    //- +section#timeline 
-    //-     include components/c.timeline.pug
-    +section.fadeInUp-animation
-        h2 Komponenten 
-        ul 
-            li Location Infos 
-            ul 
-                li Parkmöglichkeiten 
-                li Hotels 
-            li Zeitplan 
-            li Geschenk 
-            li Dresscode 
-            li Infos über Hochzeitsteam 
-            li RVSP Hinweis

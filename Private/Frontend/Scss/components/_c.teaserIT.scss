@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 40px;
 
-    @include mq(tls) {
+    @include mq(d) {
         flex-direction: row;
     }
 }
@@ -35,5 +35,9 @@
         &::before {
             display: none;
         }
+    }
+
+    iframe{
+        width: 100%;
     }
 }

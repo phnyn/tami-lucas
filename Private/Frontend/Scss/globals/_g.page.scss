@@ -1,10 +1,11 @@
-.g-page {
-    padding-top: 60px;
-}
+// .g-page {
+//     padding-top: 60px;
+// }
 
 html {
     scroll-padding-block-start: 60px;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 html.html-preventScroll {

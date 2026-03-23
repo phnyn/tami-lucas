@@ -1,11 +1,12 @@
 .g-footer {
-    @include section-space;
+    @include section-space-bg;
     background-color: $accent;
     color: $white;
     margin: 0;
     height: 100vh;
 
     @include mq(tls) {
+        min-height: 400px;
         height: auto;
     }
 }
