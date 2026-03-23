@@ -18,3 +18,24 @@ block content
                 input(type="password" placeholder="Passwort")#password
                 button.g-btn(onclick="login()") Login 
                 p#error(style="color:red;")
+
+    script.
+        async function login() {
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+            const headers = new Headers();
+            headers.append('Authorization', 'Basic ' + btoa(user + ':' + pass));
+
+            try {
+                const res = await fetch('/api/auth', { headers });
+                if(res.status === 200) {
+                window.location.href = '/protected'; // or show content inline
+                } else if(res.status === 401) {
+                document.getElementById('error').textContent = 'Falsche Logindaten';
+                } else {
+                document.getElementById('error').textContent = 'Server error';
+                }
+            } catch(e) {
+                document.getElementById('error').textContent = 'Network error';
+            }
+        }

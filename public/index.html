@@ -1,48 +1,120 @@
 <!DOCTYPE html>
-<html lang="en" class="-landing">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Landing Page</title>
-<link rel="stylesheet" href="/Public/Styles/main.css"/>
-</head>
-<body>
-<div class="c-landing">
-  <div class="c-landing_body">
-    <h1 class="c-landing_title u-font -thymesion"><span>Tami<span class="u-font -core"> & &nbsp;</span></span><span> Lucas</span></h1>
-    <h2 class="h-h3 u-font -quinoa">wollen heiraten</h2>
-
-    <p>Du bist eingeladen</p>
-    <div class="c-landing_form">
-      <input id="username" type="text" placeholder="Username">
-      <input id="password" type="password" placeholder="Passwort">
-      <button class="g-btn" onclick="login()">Login</button>
-      <p id="error" style="color:red;"></p>
-    </div>
-  </div>
-
-</div>
-
-<script>
-async function login() {
-  const user = document.getElementById('username').value;
-  const pass = document.getElementById('password').value;
-  const headers = new Headers();
-  headers.append('Authorization', 'Basic ' + btoa(user + ':' + pass));
-
-  try {
-    const res = await fetch('/api/auth', { headers });
-    if(res.status === 200) {
-      window.location.href = '/protected'; // or show content inline
-    } else if(res.status === 401) {
-      document.getElementById('error').textContent = 'Falsche Logindaten';
-    } else {
-      document.getElementById('error').textContent = 'Server error';
-    }
-  } catch(e) {
-    document.getElementById('error').textContent = 'Network error';
-  }
-}
-</script>
-</body>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Willkommen - New Klickdummy</title><link href="https://db.onlinewebfonts.com/c/ca79adee43dfd2eb108269be7a4a7ded?family=Core+Bandi+Face+W01+Regular" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+    <script type="module" src="/scripts/main.js"></script>
+  </head>
+  <body>
+    <header> 
+      <div class="c-hero"> 
+        <div class="c-hero_text">
+          <h1 class="u-t-c -white">Lucas und Tami </h1>
+          <h2 class="u-t-c -white">heiraten </h2>
+        </div>
+        <div class="c-hero_img"> <img src="https://placecats.com/500/300"></div>
+        <div class="c-hero_rvsp">
+          <button class="g-btn">Ja, ich komme!</button>
+        </div>
+      </div>
+      <div class="g-header"> 
+        <div class="g-header_lyt">
+          <div class="g-header_mobile u-hide -d">
+            <button class="js-burger g-burger g-burger--criss-cross" data-a11y-dialog-show="menu" arial-label="Open menu">
+              <div class="inner"> <span class="bar"> </span><span class="bar"> </span><span class="bar"></span></div>
+            </button>
+            <div class="o-dialog-container -menu" id="menu" aria-hidden="true" aria-labelledby="dialog-header-menu">
+              <div class="o-dialog-overlay -invisible" data-a11y-dialog-hide></div>
+              <div class="o-dialog-content -fullScreen" role="document">
+                <div class="o-dialog_header">
+                  <button data-a11y-dialog-hide aria-label="Close menu"><span>close menu</span><span class="icon-close" aria-hidden="true"></span></button>
+                </div>
+                <div class="o-dialog_body">
+                  <nav class="c-menu">
+                    <ul class="c-menu_list"> 
+                      <li> <a href="#rsvp">RVSP</a></li>
+                      <li> <a href="#location">Location</a></li>
+                      <li> <a href="#dresscode">Dresscode</a></li>
+                      <li> <a href="#gifts">Geschenke</a></li>
+                      <li> <a href="#timeline">Zeitplan</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="g-header_desktop u-hide -m -t">
+            <nav class="c-menu">
+              <ul class="c-menu_list"> 
+                <li> <a href="#rsvp">RVSP</a></li>
+                <li> <a href="#location">Location</a></li>
+                <li> <a href="#dresscode">Dresscode</a></li>
+                <li> <a href="#gifts">Geschenke</a></li>
+                <li> <a href="#timeline">Zeitplan</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="g-page">
+      <div class="g-page_lyt">
+        <div class="c-landing"> 
+          <div class="c-landing-body"> 
+            <h1 class="c-landing_title u-font -thymesion"> <span>Tami <span class="u-font -core"> & &nbsp;</span></span><span>Lucas</span></h1>
+            <h2 class="h-h3 u-font -quinoa">wollen heiraten</h2>
+            <p>Du bist eingeladen </p>
+            <div class="c-landing_form"> 
+              <input type="text" placeholder="Username" id="username">
+              <input type="password" placeholder="Passwort" id="password">
+              <button class="g-btn" onclick="login()">Login </button>
+              <p id="error" style="color:red;"></p>
+            </div>
+          </div>
+        </div>
+        <script>
+          async function login() {
+              const user = document.getElementById('username').value;
+              const pass = document.getElementById('password').value;
+              const headers = new Headers();
+              headers.append('Authorization', 'Basic ' + btoa(user + ':' + pass));
+          
+              try {
+                  const res = await fetch('/api/auth', { headers });
+                  if(res.status === 200) {
+                  window.location.href = '/protected'; // or show content inline
+                  } else if(res.status === 401) {
+                  document.getElementById('error').textContent = 'Falsche Logindaten';
+                  } else {
+                  document.getElementById('error').textContent = 'Server error';
+                  }
+              } catch(e) {
+                  document.getElementById('error').textContent = 'Network error';
+              }
+          }
+        </script>
+      </div>
+    </main><a class="g-btn -rvsp" href="#rsvp">RSVP</a>
+    <footer class="g-footer fadeInUp-animation" id="rsvp">
+      <div class="g-footer_lyt"><img class="g-footer_deco" src="SVG/Briefe.svg" alt="">
+        <div class="g-footer_content">
+          <div class="g-footer_title">
+            <h2>RSVP</h2>
+            <p class="-big">Bitte gebt uns bis zum <strong>01.05.2026</strong> Bescheid, ob ihr dabei seid!</p>
+          </div>
+          <div class="g-footer_contact">
+            <p>Tami / Lukas </p>
+            <p>Handynummer: 0110/3994394934</p>
+            <p>Email: 39943993449</p>
+            <p>Whats App Gruppe</p>
+            <div class="g-footer_cta"><a class="g-btn" href="https://wa.me/491231234567?text=Hallo%20[Name]%2C%20wir%20kommen%20zu%20%5BAnzahl%5D%20Personen.%20Namen%20der%20G%C3%A4ste%3A%20%5Bhier%20eintragen%5D%20%F0%9F%98%8A" target="_blank">Ja Ich komme</a>
+<a class="g-btn" href="https://wa.me/491231234567?text=Hallo%20[Name]%2C%20wir%20kommen%20zu%20%5BAnzahl%5D%20Personen.%20Namen%20der%20G%C3%A4ste%3A%20%5Bhier%20eintragen%5D%20%F0%9F%98%8A" target="_blank">X Ich komme nicht</a>
+            </div>
+          </div>
+        </div><img class="g-footer_deco" src="SVG/Glas1.svg" alt="">
+      </div>
+    </footer>
+  </body>
 </html>
