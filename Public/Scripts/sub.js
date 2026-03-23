@@ -1,0 +1,1 @@
+import{d as e}from"./dialog-4cce7bc0.js";var t;t=()=>{e()},"loading"!==document.readyState?t():document.addEventListener?document.addEventListener("DOMContentLoaded",t):document.attachEvent("onreadystatechange",function(){"complete"===document.readyState&&t()});

@@ -6,6 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import eslint from '@rollup/plugin-eslint';
 import strip from '@rollup/plugin-strip';
 import analyze from 'rollup-plugin-analyzer';
+import json from '@rollup/plugin-json';
 // 1. If IE11 support is required, comment in the following import statement line for babel
 // import babel from '@rollup/plugin-babel';
 

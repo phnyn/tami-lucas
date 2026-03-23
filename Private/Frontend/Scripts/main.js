@@ -6,7 +6,6 @@
 // import your own components here. For dynamic loading, see example in domReady call
 import headerSticky from './components/headerSticky';
 import dialogs from './components/dialog';
-import basicAuth from './components/basicAuth';
 
 // DOM ready helper function. Please do not touch
 function domReady (callbackFunc) {
@@ -31,7 +30,6 @@ domReady(() => {
     headerSticky();
     console.log('hello');
     dialogs();
-    basicAuth();
 
     // for dynamic/lazy loading of your component use this example
     const componentAccordion = document.querySelectorAll('.js-accordion');
