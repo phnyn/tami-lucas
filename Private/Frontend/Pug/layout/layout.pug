@@ -1,7 +1,7 @@
 include ../_mixins/c.section.pug
 
 include ../config/config.pug
-    block config
+block config
 
 doctype html
 html(lang="de")
@@ -10,7 +10,6 @@ html(lang="de")
             meta(charset='utf-8')
             meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0')
             title #{pagetitle} - New Klickdummy
-            <link href="https://db.onlinewebfonts.com/c/ca79adee43dfd2eb108269be7a4a7ded?family=Core+Bandi+Face+W01+Regular" rel="stylesheet">
             if mode
                 include ../blocks/prod-head.pug
             else

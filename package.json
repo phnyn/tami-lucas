@@ -9,7 +9,7 @@
     "export:css": "NODE_ENV=production npm run build:css && npm run && npm run prefix:css && npm run minify:css",
     "watch:js": "node_modules/.bin/rollup -c --watch",
     "export:js": "NODE_ENV=production node_modules/.bin/rollup -c",
-    "build:html": "pug Private/Frontend/Pug/*.pug -o public/ -P",
+    "build:html": "",
     "watch:html": "onchange -i 'Private/Frontend/**/*.pug' -- sh -c 'npm run build:html && npm run export:html && npm run export:html-comp && npm run export:html-globals'",
     "export:html": "pug Private/Frontend/Pug/*.pug -o Private/Frontend/Html/ -P",
     "export:html-comp": "pug Private/Frontend/Pug/components/*.pug -o Private/Frontend/Html/components/ -P",
