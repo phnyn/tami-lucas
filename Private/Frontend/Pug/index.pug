@@ -5,9 +5,16 @@ block config
     - var activePage = "startseite";
 
 block content
-    +section("fadeInUp-animation")(id="location")
-        include components/c.location.pug
-    +section("fadeInUp-animation")(id="information")
-        include components/c.teaserGrid.pug
-    +section("fadeInUp-animation")(id="grid")
-        include components/c.zeitplan.pug
+    .c-landing 
+        .c-landing-body 
+            h1.c-landing_title.u-font.-thymesion 
+                span Tami <span class="u-font -core"> & &nbsp;</span>
+                span Lucas
+            h2.h-h3.u-font.-quinoa wollen heiraten
+
+            p Du bist eingeladen 
+            .c-landing_form 
+                input(type="text" placeholder="Username")#username
+                input(type="password" placeholder="Passwort")#password
+                button.g-btn(onclick="login()") Login 
+                p#error(style="color:red;")

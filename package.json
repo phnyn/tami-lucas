@@ -2,9 +2,9 @@
   "private": true,
   "scripts": {
     "lint:css": "stylelint '**/*.scss' --fix; exit 0",
-    "build:css": "sass Private/Frontend/Scss/main.scss:public/Styles/main.css",
-    "prefix:css": "postcss public/Styles/main.css --use=autoprefixer --output=public/Styles/main.css",
-    "minify:css": "cleancss -o public/Styles/main.min.css public/Styles/main.css",
+    "build:css": "sass Private/Frontend/Scss/main.scss:public/styles/main.css",
+    "prefix:css": "postcss public/styles/main.css --use=autoprefixer --output=public/styles/main.css",
+    "minify:css": "cleancss -o public/styles/main.min.css public/styles/main.css",
     "watch:css": "onchange -i 'Private/Frontend/**/*.scss' -- sh -c 'npm run lint:css && npm run build:css && npm run prefix:css'",
     "export:css": "NODE_ENV=production npm run build:css && npm run && npm run prefix:css && npm run minify:css",
     "watch:js": "node_modules/.bin/rollup -c --watch",
@@ -17,7 +17,7 @@
     "clean-dev": "rimraf Private/Frontend/Html/* public/Scripts/Dev/* public/Scripts/Legacy/Dev/*",
     "clean": "rimraf public/Scripts/*.js public/Scripts/Legacy/*.js public/Scripts/Dev/* public/Scripts/Legacy/Dev/*",
     "build": "npm run clean && npm run export:css && npm run build:html && npm run export:js",
-    "browsersync": "browser-sync start --server --files 'public/Styles/*.css, Private/Frontend/Html/*.html, public/Scripts/Dev/*.js' --startPath 'public/'",
+    "browsersync": "browser-sync start --server --files 'public/styles/*.css, Private/Frontend/Html/*.html, public/Scripts/Dev/*.js' --startPath 'public/'",
     "dev": "npm run clean-dev && npm-run-all --parallel watch:css watch:js watch:html browsersync",
     "copy-needed": "copyfiles -f node_modules/systemjs/dist/s.min.js node_modules/promise-polyfill/dist/polyfill.min.js public/Scripts/Helpers/",
     "postinstall": "patch-package && npm run copy-needed"

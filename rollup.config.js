@@ -18,7 +18,7 @@ export default [{
     output: [
         {
             format: 'es',
-            dir: isProduction ? 'public/Scripts/' : 'public/Scripts/Dev',
+            dir: isProduction ? 'public/scripts/' : 'public/scripts/Dev',
             sourcemap: isProduction ? false : true,
         },
 // 2. If IE11 support is required, comment in the following output format block
@@ -42,8 +42,8 @@ export default [{
         json(),
         copy({
             targets: [
-                { src: 'assets/SVG/*', dest: 'public/SVG' },
-                { src: 'assets/Fonts/*', dest: 'public/Fonts' }
+                { src: 'assets/SVG/*', dest: 'public/svg' },
+                { src: 'assets/Fonts/*', dest: 'public/fonts' }
             ]
         }),
         resolve({
