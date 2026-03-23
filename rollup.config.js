@@ -6,6 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import eslint from '@rollup/plugin-eslint';
 import strip from '@rollup/plugin-strip';
 import analyze from 'rollup-plugin-analyzer';
+import copy from 'rollup-plugin-copy';
 import json from '@rollup/plugin-json';
 // 1. If IE11 support is required, comment in the following import statement line for babel
 // import babel from '@rollup/plugin-babel';
@@ -40,6 +41,13 @@ export default [{
             ]
         }),
         json(),
+            copy({
+      targets: [
+        { src: 'index.html', dest: 'public/' },
+        { src: 'assets/images/**/*', dest: 'public/images' },
+        { src: 'assets/fonts/**/*', dest: 'public/fonts' }
+      ]
+    }),
         resolve({
             preferBuiltins: false,
             browser: true
