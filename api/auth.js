@@ -1,6 +1,7 @@
 export default function handler(req, res) {
-  const USER = "admin";
-  const PASS = "secret";
+  // Benutzername/Passwort aus Environment
+  const USER = process.env.AUTH_USER;
+  const PASS = process.env.AUTH_PASS;
 
   const auth = req.headers.authorization;
 
