@@ -1,0 +1,30 @@
+
+<h3>Dialog Examples </h3>
+<p>simple dialog modals with a11y compatibility</p>
+<p>the menu is also a dialog disguised as a, well, menu.</p>
+<button data-a11y-dialog-show="dialog-example"><span>open normal dialog</span><span class="icon-open" aria-hidden="true"></span></button>
+<div class="o-dialog-container" id="dialog-example" aria-hidden="true" aria-labelledby="dialog-header-example">
+  <div class="o-dialog-overlay" data-a11y-dialog-hide="data-a11y-dialog-hide"></div>
+  <div class="o-dialog-content" role="document">
+    <div class="o-dialog_header">
+      <button data-a11y-dialog-hide="data-a11y-dialog-hide" aria-label="Close dialog"><span>close normal dialog</span><span class="icon-close" aria-hidden="true"></span></button>
+    </div>
+    <div class="o-dialog_body"> 
+      <h2 class="h-h1" id="dialog-header-example">Normal modal dialog</h2>
+      <p>this dialog modal can be closed by 'ESC' or by clicking outside or via the close button.</p>
+    </div>
+  </div>
+</div>
+<button data-a11y-dialog-show="dialog-example2"><span>open alert dialog</span><span class="icon-open" aria-hidden="true"></span></button>
+<div class="o-dialog-container" id="dialog-example2" aria-hidden="true" aria-labelledby="dialog-header-example2" role="alertdialog">
+  <div class="o-dialog-overlay"></div>
+  <div class="o-dialog-content" role="document">
+    <div class="o-dialog_header">
+      <button data-a11y-dialog-hide="data-a11y-dialog-hide" aria-label="Close dialog"><span>close alert dialog</span><span class="icon-close" aria-hidden="true"></span></button>
+    </div>
+    <div class="o-dialog_body"> 
+      <h2 class="h-h1" id="dialog-header-example2">Alert dialog</h2>
+      <p>this dialog can only be closed with the close button.</p>
+    </div>
+  </div>
+</div>
