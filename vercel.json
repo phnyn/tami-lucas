@@ -8,6 +8,8 @@
     { "src": "/scripts/(.*)", "dest": "/scripts/$1" },
     { "src": "/components/(.*)", "dest": "/components/$1" },
     { "src": "/globals/(.*)", "dest": "/globals/$1" },
+        { "src": "/fonts/(.*)", "dest": "/fonts/$1" },
+    { "src": "/svg/(.*)", "dest": "/svg/$1" },
 
     { "src": "/protected", "dest": "/protected.html" },
 
