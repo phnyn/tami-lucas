@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page</title>
-  <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-    h1 { color: #2c3e50; }
-    a { display: inline-block; margin-top: 20px; font-size: 18px; color: #3498db; text-decoration: none; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page</title>
 </head>
 <body>
-  <h1>Welcome to My Site</h1>
-  <p>This is the public landing page.</p>
-  <a href="/protected">Go to Protected Page</a>
+<h1>Welcome!</h1>
+<p>Enter username and password:</p>
+<input id="username" placeholder="Username">
+<input id="password" type="password" placeholder="Password">
+<button onclick="login()">Login</button>
+<p id="error" style="color:red;"></p>
+
+<script>
+async function login() {
+  const user = document.getElementById('username').value;
+  const pass = document.getElementById('password').value;
+  const headers = new Headers();
+  headers.append('Authorization', 'Basic ' + btoa(user + ':' + pass));
+
+  try {
+    const res = await fetch('/api/auth', { headers });
+    if(res.status === 200) {
+      window.location.href = '/protected'; // or show content inline
+    } else if(res.status === 401) {
+      document.getElementById('error').textContent = 'Wrong username or password';
+    } else {
+      document.getElementById('error').textContent = 'Server error';
+    }
+  } catch(e) {
+    document.getElementById('error').textContent = 'Network error';
+  }
+}
+</script>
 </body>
 </html>
