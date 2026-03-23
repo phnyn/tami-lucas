@@ -1,5 +1,8 @@
 {
   "rewrites": [
     { "source": "/protected", "destination": "/api/auth" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
