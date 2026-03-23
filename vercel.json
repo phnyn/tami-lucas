@@ -1,8 +1,19 @@
 {
   "rewrites": [
-    { "source": "/protected", "destination": "/api/auth" }
+    { "source": "/protected", "destination": "/protected.html" },
+    { "source": "/api/auth", "destination": "/api/auth" }
   ],
   "routes": [
+    // Erst Assets bedienen
+    { "src": "/styles/(.*)", "dest": "/styles/$1" },
+    { "src": "/scripts/(.*)", "dest": "/scripts/$1" },
+    { "src": "/components/(.*)", "dest": "/components/$1" },
+    { "src": "/globals/(.*)", "dest": "/globals/$1" },
+
+    // Dann Protected Seite
+    { "src": "/protected", "dest": "/protected.html" },
+
+    // Alles andere → index.html (SPA fallback)
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
