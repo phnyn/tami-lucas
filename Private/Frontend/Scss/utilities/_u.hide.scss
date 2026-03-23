@@ -1,0 +1,22 @@
+// utility classes to hide elements on different breakpoints
+// append class u-hide with modifier -d for desktop, -m for mobile or -t for tablet sizes
+// e.g.: <span class="u-hide -t">element</span> hides element for tablet sizes
+// modifiers may be combined, e.g.: class="u-hide -m -t" hides element for mobile and tablet sizes
+
+.u-hide.-m {
+    @include mq($from: mp, $until: tp) {
+        display: none;
+    }
+}
+
+.u-hide.-t {
+    @include mq($from: tp, $until: d) {
+        display: none;
+    }
+}
+
+.u-hide.-d {
+    @include mq(d) {
+        display: none;
+    }
+}

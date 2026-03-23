@@ -1,0 +1,28 @@
+.c-alert {
+    width: 100%;
+    position: fixed;
+    transition: $g-transition;
+    display: flex;
+    z-index: 20;
+}
+
+.c-alert_wrap {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: orange;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+// .c-alert_msg{
+// }
+
+// .c-alert_close{
+// }
+
+// .c-alert_icon{
+// }

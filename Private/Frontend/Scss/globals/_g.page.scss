@@ -1,0 +1,12 @@
+.g-page {
+    padding-top: 60px;
+}
+
+html {
+    scroll-padding-block-start: 60px;
+    scroll-behavior: smooth;
+}
+
+html.html-preventScroll {
+    overflow-y: hidden;
+}

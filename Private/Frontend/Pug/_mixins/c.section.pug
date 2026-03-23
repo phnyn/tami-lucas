@@ -1,0 +1,7 @@
+//- Example Mixin for reusable HTML blocks
+//- Each mixin needs to be included in layout.pug
+
+mixin section(className)
+    section.c-section(class=(className ? className : ""))&attributes(attributes)
+        .c-section_lyt
+            block

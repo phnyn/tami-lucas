@@ -1,0 +1,29 @@
+include ../_mixins/c.section.pug
+
+include ../config/config.pug
+    block config
+
+doctype html
+html(lang="de")
+    block head
+        head
+            meta(charset='utf-8')
+            meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0')
+            title #{pagetitle} - New Klickdummy
+            <link href="https://db.onlinewebfonts.com/c/ca79adee43dfd2eb108269be7a4a7ded?family=Core+Bandi+Face+W01+Regular" rel="stylesheet">
+            if mode
+                include ../blocks/prod-head.pug
+            else
+                include ../blocks/dev-head.pug
+    body
+        header 
+            include ../components/c.hero.pug
+            include ../globals/g.header.pug
+
+        main.g-page
+            .g-page_lyt
+                block content
+                    h1 Default Content, will be replaced with content from pages
+
+        include ../components/c.rvspBtn.pug
+        include ../globals/g.footer.pug

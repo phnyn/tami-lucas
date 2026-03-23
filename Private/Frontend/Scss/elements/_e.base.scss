@@ -1,0 +1,16 @@
+html {
+    overflow-y: scroll;
+    min-height: 100%;
+    background-color: $primary;
+}
+
+img {
+    max-width: 100%;
+    font-style: italic;
+    vertical-align: middle;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+}

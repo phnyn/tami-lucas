@@ -1,0 +1,68 @@
+// GLOBALS
+@use "sass:math";
+
+$g-radius: 3px !default;
+$g-transition: all 0.3s ease-in-out !default;
+
+// colors
+$black: #000000;
+$white: #ffffff;
+$accent: #3f5008;
+$primary: #ffd9c2;
+$primaryLight: #f8e4d7;
+
+$page-width: 1020px;
+
+$text-font: "Core Bandi","Helvetica", "Arial", sans-serif;
+$head-font: "Scarlett", "Arial", sans-serif;
+
+$font-core: "Core Bandi";
+$font-copperplate: "Copperplate Gothic";
+
+// $font-quinoa: "CS Quinoa";
+$font-scarlett: "Scarlett";
+$font-themysion: "Themysion";
+
+
+$hamburger-class-name: "g-burger";
+$hamburger-active-class-name: "-active";
+$hamburger-size: 30px;
+$hamburger-thickness: 2px;
+$hamburger-color: $black;
+$hamburger-color-active: $black;
+$hamburger-background: transparent;
+$hamburger-background-active: transparent;
+$hamburger-border-color: transparent;
+$hamburger-border-width: 0;
+$hamburger-opacity: 1;
+$hamburger-opacity-hover: 1;
+$hamburger-padding: 5px;
+$hamburger-bar-spacing: math.div($hamburger-size, 6);
+$hamburger-animation-speed: 2;
+$hamburger-border-radius: 0;
+
+// use clamp-calc for fluid sizing
+// eg.:
+// font-size: clamp-calc(10px, 16px);
+// starts at 10px ends with 16px between given min and max, below and above min and max, value is locked to 10px and 16px
+
+$min-width: 375px;
+$max-width: 1280px;
+
+@function clamp-calc($size-at-min-width, $size-at-max-width) {
+    $slope: math.div($size-at-max-width - $size-at-min-width, $max-width - $min-width);
+    $y-axis-intersection: -1 * $min-width * $slope + $size-at-min-width;
+    $return-value: clamp(#{$size-at-min-width}, #{$y-axis-intersection} + #{$slope} * 100vw, #{$size-at-max-width});
+
+    @return $return-value;
+}
+
+$mq-breakpoints: (
+    mp: 320px,
+    mls: 480px,
+    tp: 620px,
+    tls: 740px,
+    d: 1025px,
+    dw: 1280px,
+    dxw: 1400px,
+);

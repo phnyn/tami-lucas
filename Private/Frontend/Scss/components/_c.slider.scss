@@ -1,0 +1,25 @@
+// A11y Slider
+.c-slider {
+    .c-slider_wrap {
+        padding-bottom: 30px;
+        margin-bottom: 50px;
+    }
+
+    .swiper-slide {
+        //center img
+        display: flex;
+        justify-content: center;
+    }
+
+    .swiper-button-prev {
+    }
+
+    .swiper-button-next {
+    }
+
+    .swiper-pagination {
+    }
+
+    .swiper-pagination-bullets {
+    }
+}

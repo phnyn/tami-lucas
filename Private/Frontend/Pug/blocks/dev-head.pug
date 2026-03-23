@@ -1,0 +1,27 @@
+link(rel='stylesheet', href="../../../Public/Styles/main.css")
+
+//- Please comment out/in one of the following script loading blocks, depending on required build targets set in .browserlistrc
+//- we support IE11 only on special request
+
+//- only modern / Start
+script(type="module", src="../../../Public/Scripts/Dev/main.js")
+//- only modern / End
+
+//- modern and IE11 / Start
+//- script.
+    import("../../../Public/Scripts/Dev/main.js");
+    window.supportsDynamicImport = true;
+//- script.
+    if (typeof Promise === 'undefined')
+        document.write('<script src="../../../Public/Scripts/Helpers/polyfill.min.js"><\/script>');
+    
+//- script.
+    if (!window.supportsDynamicImport) {
+        const systemJsLoaderTag = document.createElement('script');
+        systemJsLoaderTag.src = '../../../Public/Scripts/Helpers/s.min.js';
+        systemJsLoaderTag.addEventListener('load', function () {
+            System.import('../../../Public/Scripts/Legacy/Dev/main.js');
+        });
+        document.head.appendChild(systemJsLoaderTag);
+    }
+//- modern and IE11 / End

@@ -1,0 +1,83 @@
+.g-footer {
+    @include section-space;
+    background-color: $accent;
+    color: $white;
+    margin: 0;
+    height: 100vh;
+
+    @include mq(tls) {
+        height: auto;
+    }
+}
+
+.g-footer_lyt {
+    max-width: $page-width;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    height: 100%;
+
+    @include mq(tls) {
+        flex-direction: row;
+    }
+}
+
+.g-footer_title {
+    h3 {
+        font-family: $font-copperplate;
+    }
+}
+
+.g-footer_body {
+    display: flex;
+    flex-direction: row;
+}
+
+.g-footer_cta {
+    margin-top: 16px;
+}
+
+.g-footer_deco {
+    filter: invert(360);
+    width: clamp-calc(150px, 200px);
+    position: absolute;
+
+    &:first-of-type {
+        top: 16px;
+        left: 0;
+        animation: wiggle 3s infinite;
+    }
+
+    &:last-of-type {
+        bottom: 16px;
+        right: 0;
+        animation: wiggle-revert 3s infinite;
+    }
+    opacity: 0.5;
+
+
+    @include mq(tls) {
+        position: relative;
+        opacity: 1;
+    }
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    80% { transform: rotate(0deg); }
+    85% { transform: rotate(5deg); }
+    95% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes wiggle-revert {
+    0% { transform: rotate(0deg); }
+    80% { transform: rotate(0deg); }
+    85% { transform: rotate(-5deg); }
+    95% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}

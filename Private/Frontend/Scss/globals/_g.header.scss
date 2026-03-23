@@ -1,0 +1,48 @@
+.g-header {
+    height: 60px;
+    width: 100%;
+    background: transparent;
+    z-index: 10;
+    padding: 0 clamp-calc(30px, 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    //needed for sticky header
+    // box-shadow: 0 1px 0 0 $black;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    position: relative;
+
+
+    &.-scrolled {
+        // opacity: 0;
+        // transform: translateY(-100%);
+    }
+}
+
+.g-header_lyt {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: $page-width;
+    margin: 0;
+    justify-content: right;
+
+    .-scrolled & {
+        padding-inline: clamp-calc(30px, 60px);
+        position: fixed;
+        top: 15px;
+        max-width: $page-width;
+        margin: 0 auto;
+
+        @include mq(d) {
+            padding: 0;
+        }
+    }
+}
+
+.g-header_mobile {
+    display: flex;
+    justify-content: right;
+}

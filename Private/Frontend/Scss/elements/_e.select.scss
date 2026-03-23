@@ -1,0 +1,143 @@
+// .e-select_wrapper {
+//     padding-left: 20px;
+
+//     label {
+//         display: block;
+//         font-weight: bold;
+//         margin-bottom: 10px;
+//         width: fit-content; // actives native select on desktop if not
+//     }
+// }
+
+//- custom and native select must have the same width/height
+.e-select_native,
+.e-select_custom {
+    position: relative;
+    width: 200px;
+    height: 50px;
+}
+
+//- overlaps trigger field and options
+.e-select_wrap {
+    position: relative;
+}
+
+//- make sure the custom select does not mess with the layout
+.e-select_custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    cursor: pointer;
+}
+
+//- ! DO NOT DELETE
+//- This media query detects devices where the primary
+//- input mechanism can hover over elements. (e.g. computers with a mouse)
+@media (hover: hover) {
+    //- Since mouse is used -> show custom select
+    .e-select_custom {
+        display: block;
+    }
+
+    // computer using keyboard -> hide custom select while native is focused
+    .e-select_native:focus + .e-select_custom {
+        display: none;
+    }
+}
+
+.e-select_native,
+.e-select_custom-trigger {
+    border: 5px solid red;
+    background-color: yellow;
+}
+
+.e-select_native {
+    @media (hover: hover) {
+        // kein focus im mobilen
+        &:focus {
+            outline: 2px solid blue;
+            outline-offset: 3px;
+        }
+    }
+
+    // icon im native select
+    &:not([multiple]):not([size]) {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://creativecommons.org/ns%23' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' id='svg2' viewBox='0 0 33.584946 20' height='20' width='33.584946' version='1.1'%3E%3Cmetadata id='metadata13'%3E%3Crdf:RDF%3E%3Ccc:Work rdf:about=''%3E%3Cdc:format%3Eimage/svg+xml%3C/dc:format%3E%3Cdc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage' /%3E%3Cdc:title%3E%3C/dc:title%3E%3C/cc:Work%3E%3C/rdf:RDF%3E%3C/metadata%3E%3Cdefs id='defs11' /%3E%3Cg transform='translate(207.1015,-796.8985)' id='icomoon-ignore' /%3E%3Cpath style='fill:%23000000;fill-opacity:1' id='path7' d='M 0,2.6415 2.641502,0 16.792474,14.717 30.943445,0 33.584947,2.6415 16.792474,20 Z' /%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: right 0.7em top 55%;
+        background-size: 1em auto;
+    }
+}
+
+/* custom select styling */
+.e-select_customTrigger {
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &::after {
+        content: "▾";
+        position: absolute;
+        right: 0.7em;
+    }
+
+    &:hover {
+        border-color: pink;
+        background-color: green;
+
+        &::after {
+            color: purple;
+        }
+    }
+}
+
+/* styling of custom options */
+.e-select_customOptions {
+    background-color: lightcoral;
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100%;
+    border: 1px solid orange;
+    z-index: 1;
+    display: none;
+
+    //- when custom select active show custom options
+    .-active & {
+        display: block;
+    }
+}
+
+.e-select_customOption {
+    position: relative;
+
+    &.-active {
+        background-color: aqua;
+
+        //- marker for chosen option
+        &::before {
+            content: "x";
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    // desktop hover and desktop hover with keyboard
+    &.-hover,
+    &:hover {
+        background-color: khaki;
+    }
+
+    //- border between options
+    &:not(:last-of-type)::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+}

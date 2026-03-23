@@ -1,0 +1,16 @@
+// use sr-only for elements, which should only be visible to screenreaders
+// use either as mixin or append class sr-only to element
+
+@mixin sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.sr-only {
+    @include sr-only;
+}

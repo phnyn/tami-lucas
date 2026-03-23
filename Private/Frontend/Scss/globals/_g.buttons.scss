@@ -1,0 +1,32 @@
+.g-btn {
+    text-decoration: none;
+    background-color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: $accent;
+
+    * + & {
+        margin-top: 16px;
+    }
+
+    &.-rvsp {
+        padding: 4px;
+        background-color: white;
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: rgb(0 0 0 / 0.05) 0 0 8px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        border: 1px solid white;
+        outline: 1px solid white;
+        outline-offset: 2px;
+        font-size: 20px;
+    }
+}

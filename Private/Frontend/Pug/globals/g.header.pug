@@ -1,0 +1,20 @@
+.g-header 
+    .g-header_lyt
+        .g-header_mobile.u-hide.-d
+            button.js-burger.g-burger.g-burger--criss-cross(data-a11y-dialog-show="menu" arial-label="Open menu")
+                .inner 
+                    span.bar 
+                    span.bar 
+                    span.bar
+            .o-dialog-container.-menu#menu(aria-hidden="true" aria-labelledby="dialog-header-menu" )
+                .o-dialog-overlay.-invisible(data-a11y-dialog-hide)
+                .o-dialog-content.-fullScreen(role="document")
+                    .o-dialog_header
+                            
+                        button(data-a11y-dialog-hide aria-label="Close menu")
+                            span close menu
+                            span.icon-close(aria-hidden="true")
+                    .o-dialog_body
+                        include ../components/c.menu.pug
+        .g-header_desktop.u-hide.-m.-t
+            include ../components/c.menu.pug

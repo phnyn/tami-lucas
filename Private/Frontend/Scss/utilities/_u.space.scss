@@ -1,0 +1,36 @@
+// use to override margin spacing for elements or components
+// naming follows new logical properties syntax
+// "i" for inline, which is left and right, "b" for block, which is top and bottom
+// read about here: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties
+// extend at your own discretion, e.g. for paddings, please follow naming convention
+
+// vertical
+.u-nospace.-mb {
+    margin-block: 0;
+}
+
+// horizontal
+.u-nospace.-mi {
+    margin-inline: 0;
+}
+
+
+// upper
+.u-nospace.-mbs {
+    margin-block-start: 0;
+}
+
+// lower
+.u-nospace.-mbe {
+    margin-block-end: 0;
+}
+
+// left
+.u-nospace.-mis {
+    margin-inline-start: 0;
+}
+
+// right
+.u-nospace.-mie {
+    margin-inline-end: 0;
+}

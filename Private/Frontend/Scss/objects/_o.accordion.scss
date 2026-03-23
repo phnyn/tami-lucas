@@ -1,0 +1,34 @@
+// simple accordion css, optionally usable as tabs on larger breakpoints
+
+/* purgecss start ignore */
+.o-accordion {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.o-accordion_header {
+    width: 100%;
+    cursor: pointer;
+
+    // enable next declaration block, if you need accordion to behave as tabs on larger breakpoint
+    // @include mq(tls) {
+    //     order: -1;
+    //   /* let tabs scale to fit multiple on each row */
+    //   width: auto;
+    // }
+}
+
+.o-accordion_content {
+    display: none;
+    width: 100%;
+
+    &[aria-hidden="true"] {
+        display: none;
+    }
+
+    &[aria-hidden="false"] {
+        display: block;
+    }
+}
+
+/* purgecss end ignore */

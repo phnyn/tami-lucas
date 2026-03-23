@@ -1,0 +1,64 @@
+// use to override text properties when needed
+// modify and extend at your own discretion
+// use only for overrides, not for general styling of elements in components
+
+// align center
+.u-t-align.-c {
+    text-align: center;
+}
+
+// align left
+.u-t-align.-s {
+    text-align: start;
+}
+
+// align right
+.u-t-align.-e {
+    text-align: end;
+}
+
+// override for normal
+.u-t-fontweight.-w400 {
+    font-weight: 400;
+}
+
+// override for bold
+.u-t-fontweight.-w700 {
+    font-weight: 700;
+}
+
+// override text color
+.u-t-c.-blue {
+    color: blue;
+}
+
+.u-t-c.-white {
+    color: $white;
+}
+
+// override size
+.u-t-fontsize.-s {
+    font-size: clamp-calc(12px, 14px);
+    line-height: clamp-calc(18px, 20px);
+}
+
+.u-bg.-primaryLight {
+    background-color: $primaryLight;
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.fadeInUp-animation {
+    animation: 1.5s fadeInUp;
+}

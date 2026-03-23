@@ -1,0 +1,58 @@
+//- hybrid select component
+//- select.js and selectGenerator.js generate the custom select in .e-select_wrap
+//- generated select
+//-    .e-select_custom.js-selectCustom
+        .e-select_custom-trigger Select ..
+        .e-select_custom-options
+            .e-select_custom-option(data-value="1") 1
+            .e-select_custom-option(data-value="2") 2 -->
+
+h3 Custom Styled form elements 
+h4 Selects
+p selects can be browser styled or as in this case are both custom styled and browser styled, depending on context. on desktop devices they get a custom markup, behaviour and styling. on movbile devices they retain their browser based behaviour and styling, to not interfere with selection ui on mobile.
+h4 Checkboxes and Radios 
+p custom styling purely based on css.
+fieldset 
+    legend Custom Form elements
+    .e-form_fieldWrap.js-select
+        label(for="selectLabel") Number
+        .e-select_wrap
+            select(class="e-select_native" name="native-select" id="selectLabel" aria-describedby="selectLabelDesc").js-selectNative
+                option(value="0" disabled="" selected="") select number
+                option(value="1") 1
+                option(value="2") 2
+        span(id="selectLabelDesc" style="display:none;") Drücke die Leertaste um die Auswahlmöglichkeiten zu öffnen, runter und hoch um die Möglichkeiten zu navigieren und Enter um Auswahl zu machen.
+    .e-form_fieldWrap.js-select
+        label(for="selectLabel1") Salutation
+        .e-select_wrap
+            select(class="e-select_native" name="native-select" id="selectLabel1" aria-describedby="selectDesc2").js-selectNative
+                option(value="0" disabled="" selected="") select salutation
+                option(value="1") hallo
+                option(value="2") hi     
+                option(value="3") bonjour
+        span(id="selectDesc2" style="display:none;") beschreibung in voiceover nummer 2
+
+    .e-form_fieldWrap
+        p.label Checkbox Group
+        .e-form_rcWrap 
+            input(type="checkbox" id="checkbox1")
+            label(for="checkbox1") checkbox1
+        .e-form_rcWrap 
+            input(type="checkbox" id="disabledCheck" checked disabled)
+            label(for="disabledCheck") disabled checkbox
+        .e-form_rcWrap 
+            input(type="checkbox" id="disabledCheck" disabled)
+            label(for="disabledCheck") disabled checkbox
+    .e-form_fieldWrap
+        p.label Radio Group
+        .e-form_rcWrap
+            input(type="radio" id="radio1" name="radios" value="1")
+            label(for="radio1") radio 1
+        .e-form_rcWrap
+            input(type="radio" id="radio2" name="radios" value="2")
+            label(for="radio2") radio 2
+        .e-form_rcWrap
+            input(type="radio" id="radio3" name="radios" value="3" disabled)
+            label(for="radio3") disabled Radio    
+
+

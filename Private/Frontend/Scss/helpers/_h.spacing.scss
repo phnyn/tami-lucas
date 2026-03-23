@@ -1,0 +1,52 @@
+// use section-space mixin for consistent spacing between content area components
+// section-space for components with no background color, maintains correct spacing with collapsing margins between components (no double space)
+// section-space-bg for components with background color
+
+@mixin section-space {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    padding-left: clamp-calc(30px, 60px);
+    padding-right: clamp-calc(30px, 60px);
+    margin-top: clamp-calc(30px, 60px);
+    margin-bottom: clamp-calc(30px, 60px);
+
+    &.-smallSpacing {
+        margin-top: clamp-calc(15px, 30px);
+        margin-bottom: clamp-calc(15px, 30px);
+    }
+
+    &.-noSpacing {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@mixin section-space-bg {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    padding-left: clamp-calc(30px, 60px);
+    padding-right: clamp-calc(30px, 60px);
+    padding-top: clamp-calc(30px, 60px);
+    padding-bottom: clamp-calc(30px, 60px);
+
+    &.-smallSpacing {
+        padding-top: clamp-calc(15px, 30px);
+        padding-bottom: clamp-calc(15px, 30px);
+    }
+
+    &.-noSpacing {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+@mixin component-space {
+    max-width: 1020px;
+    margin: 0 auto;
+
+    * + & {
+        margin-top: clamp-calc(30px, 60px);
+    }
+}

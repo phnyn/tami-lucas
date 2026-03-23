@@ -1,0 +1,64 @@
+// swiper css
+@import "../../../../node_modules/swiper/swiper.scss";
+@import "../../../../node_modules/swiper/modules/a11y/a11y.scss";
+@import "../../../../node_modules/swiper/modules/effect-fade/effect-fade.scss";
+@import "../../../../node_modules/swiper/modules/navigation/navigation.scss";
+@import "../../../../node_modules/swiper/modules/pagination/pagination.scss";
+
+.o-slider {
+    position: relative;
+}
+
+.swiper {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+
+.swiper-pagination-bullets {
+    bottom: 0 !important;
+}
+
+.swiper-pagination {
+    padding-left: 0;
+}
+
+.swiper-pagination-bullet,
+.swiper-button-next,
+.swiper-button-prev {
+    &:focus-visible {
+        outline: 2px solid brown;
+        outline-offset: 2px;
+    }
+}
+
+.swiper-pagination-bullet {
+    height: 12px;
+    width: 12px;
+    background-color: white;
+    opacity: 1;
+    border: 1px solid orange;
+
+    &.swiper-pagination-bullet-active {
+        background-color: orange;
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    z-index: 11;
+    height: auto;
+    width: auto;
+    color: orange;
+    opacity: 1;
+    margin-top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.swiper-button-disabled {
+    color: grey;
+    opacity: 1 !important;
+}

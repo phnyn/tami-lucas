@@ -1,0 +1,104 @@
+html {
+    font-family: $text-font;
+    color: $accent;
+    font-size: 1rem;
+}
+
+a {
+    * + & {
+        margin-top: 16px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h-h1,
+.h-h2,
+.h-h3,
+.h-h4,
+.h-h5,
+.h-h6 {
+    margin: 0;
+    font-family: $head-font;
+    line-height: 1;
+}
+
+h2,
+.h-h2 {
+    font-size: 3.815rem;
+}
+
+h3,
+.h-h3 {
+    font-size: 3.052rem;
+}
+
+h4,
+.h-h4 {
+    font-size: 2.441rem;
+}
+
+h5,
+.h-h5 {
+    font-size: 1.953rem;
+}
+
+
+p {
+    margin-bottom: 0;
+    font-size: 1rem;
+
+    &.-small {
+        font-size: 0.8rem;
+    }
+
+    &.-big {
+        font-size: 1.5rem;
+    }
+
+    * + & {
+        margin-top: 16px;
+    }
+
+    & + & {
+        margin-top: 12px;
+    }
+}
+
+span {
+    &.-big {
+        font-size: 1.5rem;
+    }
+}
+
+
+ul {
+    li {
+    }
+}
+
+table {
+}
+
+thead {
+    th {
+    }
+}
+
+tbody {
+    td {
+    }
+}
+
+figure {
+}
+
+figcaption {
+}
+
+blockquote {
+}

@@ -1,0 +1,10 @@
+.c-menu_list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include mq(d) {
+        flex-direction: row;
+        justify-content: right;
+    }
+}

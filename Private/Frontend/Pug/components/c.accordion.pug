@@ -1,0 +1,51 @@
+//- simple accordion component, can be set to behave as tabbed content on large breakpoint
+//- have a look in accordion.js and o-accordion.scss at comments for tab setting
+
+h3 Accordion Component with second item set to expanded and open items can be closed
+.c-accordion     
+    .c-accordion_wrap.o-accordion.js-accordion
+        .c-accordion_item
+            h4.o-accordion_header
+                button.c-accordion_button.js-accordion_toggle(aria-expanded="false")
+                    span.c-accordion_header Akkordion text 1
+                    span(aria-hidden="true").c-accordion_toggle
+            .o-accordion_content(aria-hidden="true").c-accordion_content
+                p Nullam dictum felis eu pede. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis.
+        .c-accordion_item
+            h4.o-accordion_header
+                button.c-accordion_button.js-accordion_toggle(aria-expanded="true")
+                    span.c-accordion_header Akkordion text 2
+                    span(aria-hidden="true").c-accordion_toggle
+            .o-accordion_content(aria-hidden="true").c-accordion_content
+                p Nullam dictum felis eu pede. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis.
+        .c-accordion_item
+            h4.o-accordion_header
+                button.c-accordion_button.js-accordion_toggle(aria-expanded="false")
+                    span.c-accordion_header Akkordion text 3
+                    span(aria-hidden="true").c-accordion_toggle
+            .o-accordion_content(aria-hidden="true").c-accordion_content
+                p Nullam dictum felis eu pede. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis.
+h3 Accordion Component with first item set to expanded and at least one item has to stay open
+.c-accordion     
+    .c-accordion_wrap.o-accordion.js-accordion.-oneOpen
+        .c-accordion_item
+            h4.o-accordion_header
+                button.c-accordion_button.js-accordion_toggle(aria-expanded="true")
+                    span.c-accordion_header Akkordion text 1
+                    span(aria-hidden="true").c-accordion_toggle
+            .o-accordion_content(aria-hidden="true").c-accordion_content
+                p Nullam dictum felis eu pede. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis.
+        .c-accordion_item
+            h4.o-accordion_header
+                button.c-accordion_button.js-accordion_toggle(aria-expanded="false")
+                    span.c-accordion_header Akkordion text 2
+                    span(aria-hidden="true").c-accordion_toggle
+            .o-accordion_content(aria-hidden="true").c-accordion_content
+                p Nullam dictum felis eu pede. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis.
+        .c-accordion_item
+            h4.o-accordion_header
+                button.c-accordion_button.js-accordion_toggle(aria-expanded="false")
+                    span.c-accordion_header Akkordion text 3
+                    span(aria-hidden="true").c-accordion_toggle
+            .o-accordion_content(aria-hidden="true").c-accordion_content
+                p Nullam dictum felis eu pede. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis.

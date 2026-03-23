@@ -1,0 +1,29 @@
+.c-section {
+    @include section-space;
+
+    //removes left and right padding for section
+    &.-fullwidth {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &.-bgPrimary {
+        background: $primaryLight;
+
+        @include section-space-bg;
+    }
+
+    &.-bgDark {
+        background: $accent;
+    }
+}
+
+.c-section_lyt {
+    width: 100%;
+    max-width: $page-width;
+    margin: 0 auto;
+
+    .c-section.-fullwidth & {
+        max-width: 100%;
+    }
+}

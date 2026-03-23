@@ -1,0 +1,31 @@
+h3 Dialog Examples 
+p simple dialog modals with a11y compatibility
+p the menu is also a dialog disguised as a, well, menu.
+button(data-a11y-dialog-show="dialog-example")
+    span open normal dialog
+    span.icon-open(aria-hidden="true")
+.o-dialog-container#dialog-example(aria-hidden="true" aria-labelledby="dialog-header-example" )
+    .o-dialog-overlay(data-a11y-dialog-hide)
+    .o-dialog-content(role="document")
+        .o-dialog_header
+                
+            button(data-a11y-dialog-hide aria-label="Close dialog")
+                span close normal dialog
+                span.icon-close(aria-hidden="true")
+        .o-dialog_body 
+            h2.h-h1#dialog-header-example Normal modal dialog
+            p this dialog modal can be closed by 'ESC' or by clicking outside or via the close button.
+button(data-a11y-dialog-show="dialog-example2")
+    span open alert dialog
+    span.icon-open(aria-hidden="true")
+.o-dialog-container#dialog-example2(aria-hidden="true" aria-labelledby="dialog-header-example2" role="alertdialog")
+    .o-dialog-overlay
+    .o-dialog-content(role="document")
+        .o-dialog_header
+                
+            button(data-a11y-dialog-hide aria-label="Close dialog")
+                span close alert dialog
+                span.icon-close(aria-hidden="true")
+        .o-dialog_body 
+            h2.h-h1#dialog-header-example2 Alert dialog
+            p this dialog can only be closed with the close button.
