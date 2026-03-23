@@ -15,7 +15,6 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 export default [{
     input: ['Private/Frontend/Scripts/main.js', 'Private/Frontend/Scripts/sub.js'],
-    external: ['express'],
     output: [
         {
             format: 'es',
