@@ -127,8 +127,15 @@ domReady(() => {
     
     // initialise your imported component here
     headerSticky();
-    console.log('hello');
     dialogs();
+
+    const componentfadeIn = document.querySelectorAll('.fade-in');
+    if (componentfadeIn.length > 0) {
+        import('./fadeIn-bebe33db.js').then(({ default: fadeIn }) => {
+            fadeIn();
+            return null;
+        });
+    }
 
     // for dynamic/lazy loading of your component use this example
     const componentAccordion = document.querySelectorAll('.js-accordion');
@@ -143,30 +150,6 @@ domReady(() => {
     if (componentSlider.length > 0) {
         import('./slider-0789eb84.js').then(({ default: slider }) => {
             slider();
-            return null;
-        });
-    }
-
-    const componentSelect = document.querySelectorAll('.js-select');
-    if (componentSelect.length > 0) {
-        import('./select-359bb26f.js').then(({ default: select }) => {
-            select();
-            return null;
-        });
-    }
-
-    document.querySelectorAll('.js-copyURL');
-    if (componentSelect.length > 0) {
-        import('./copyURL-8d7516a1.js').then(({ default: copyURL }) => {
-            copyURL();
-            return null;
-        });
-    }
-
-    document.querySelectorAll('.js-flipCard');
-    if (componentSelect.length > 0) {
-        import('./flipCard-c25813be.js').then(({ default: flipCard }) => {
-            flipCard();
             return null;
         });
     }

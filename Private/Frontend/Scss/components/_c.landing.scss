@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .c-landing_body {
     // Base background
@@ -48,6 +49,14 @@
     -webkit-mask-size: calc(var(--s) * 4) calc(var(--s) * 4);
     -webkit-mask-repeat: repeat;
 
+    h1{
+        font-size: clamp-calc(3.75rem, 4.5rem);
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        margin-top: clamp-calc(24px, 60px);
+    }
 
     // Responsive adjustments
     @include mq(tls) {
@@ -59,10 +68,16 @@
 }
 
 .c-landing_form {
+    min-width: 320px;
 
     button{
-        border-radius: 0;
+        border-radius: 4px;
         border: 1px solid $white;
+        height: 45px;
+    }
+
+    @include mq(tls){
+        min-width: auto;
     }
 }
 

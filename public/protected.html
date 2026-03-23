@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-    <title>Willkommen - New Klickdummy</title>
+    <title>Hipp, Hipp, Hurra - Lucas & Tami</title>
     <link rel="stylesheet" href="./styles/main.css">
     <script type="module" src="./scripts/main.js"></script>
   </head>
   <body>
     <header> 
-      <div class="c-hero"> 
+      <div class="c-hero fade-in"> 
         <div class="c-hero_text">
           <h1 class="u-t-c -white">Lucas und Tami </h1>
           <h2 class="u-t-c -white">heiraten </h2>
@@ -29,7 +29,7 @@
               <div class="o-dialog-overlay -invisible" data-a11y-dialog-hide></div>
               <div class="o-dialog-content -fullScreen" role="document">
                 <div class="o-dialog_header">
-                  <button data-a11y-dialog-hide aria-label="Close menu"><span>close menu</span><span class="icon-close" aria-hidden="true"></span></button>
+                  <button class="g-btn" data-a11y-dialog-hide aria-label="Close menu"><span>Schließen</span><span class="icon-close" aria-hidden="true"></span></button>
                 </div>
                 <div class="o-dialog_body">
                   <nav class="c-menu">
@@ -48,11 +48,11 @@
           <div class="g-header_desktop u-hide -m -t">
             <nav class="c-menu">
               <ul class="c-menu_list"> 
-                <li> <a href="#rsvp">RVSP</a></li>
                 <li> <a href="#location">Location</a></li>
                 <li> <a href="#dresscode">Dresscode</a></li>
                 <li> <a href="#gifts">Geschenke</a></li>
                 <li> <a href="#timeline">Zeitplan</a></li>
+                <li> <a href="#rsvp">RVSP</a></li>
               </ul>
             </nav>
           </div>
@@ -61,10 +61,48 @@
     </header>
     <main class="g-page">
       <div class="g-page_lyt">
+        <section class="c-section" id="information">
+          <div class="c-section_lyt">
+            
+            <div class="c-teaserGrid">
+              <h2>Save the date</h2>
+              <p class="fade-in -big" style="text-align: center;">Die Trauung ist am <strong>18.09.2026</strong>, <br> aber wir machen ein ganzes Wochenende draus (17.–19.09.). </p>
+              <div class="c-teaserGrid_wrap fade-in">
+                <div class="c-teaserGrid_item">
+                  <div class="c-teaserGrid_img">
+                    <img src="svg/links.svg" alt="">
+                  </div>
+                  <div class="c-teaserGrid_body"> 
+                    <h3 class="c-teaserGrid_header">17.09</h3>
+                    <p>Anfahrt</p>
+                  </div>
+                </div>
+                <div class="c-teaserGrid_item">
+                  <div class="c-teaserGrid_body"> 
+                    <h3 class="c-teaserGrid_header -big">18.09</h3>
+                    <p class="-big">Hochzeit</p>
+                  </div>
+                  <div class="c-teaserGrid_img">
+                    <img src="svg/Ringe.svg" alt="">
+                  </div>
+                </div>
+                <div class="c-teaserGrid_item">
+                  <div class="c-teaserGrid_img">
+                    <img src="svg/rechts.svg" alt="">
+                  </div>
+                  <div class="c-teaserGrid_body"> 
+                    <h3 class="c-teaserGrid_header">19.09</h3>
+                    <p>Abfahrt</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="c-section -bgPrimaryLight" id="location">
           <div class="c-section_lyt">
             <div class="c-teaserIT"> 
-              <div class="c-teaserIT_body"> 
+              <div class="c-teaserIT_body fade-in"> 
                 <h2>Location</h2>
                 <h3 class="u-font -copper"><a href="https://www.farmhousewandlitz.com" target="_blank">Farmhouse Wandlitz</a></h3>
                 <p>Wir feiern unsere Hochzeit an <a href="https://www.farmhousewandlitz.com" target="_blank">Farmhouse Wandlitz</a> bei Berlin</p>
@@ -80,7 +118,7 @@
                   <In>ca. 30 Minuten mit dem Auto, von Berlin-Mitte über die Autobahn A11 oder B109/B273 erreichbar</In>
                 </ul>
               </div>
-              <div class="c-teaserIT_img">
+              <div class="c-teaserIT_img fade-in">
                 <div class="c-teaserIT_overlay"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2416.533825015372!2d13.434917799999997!3d52.72255889999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a9a5bfa2b8de99%3A0xecb156247262784b!2sFarmhouse%20Wandlitz%20UG!5e0!3m2!1sde!2sde!4v1774252826053!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
               </div>
             </div>
@@ -89,23 +127,23 @@
         <section class="c-section" id="information">
           <div class="c-section_lyt">
             <div class="c-teaserGrid">
-              <h2>About the wedding</h2>
-              <p>Important details about our outdoor wedding</p>
-              <div class="c-teaserGrid_wrap">
+              <h2 class="fade-in">More Details</h2>
+              <p class="fade-in">Weitere wichtige Informationen</p>
+              <div class="c-teaserGrid_wrap fade-in">
                 <div class="c-teaserGrid_item">
                   <div class="c-teaserGrid_body"> 
-                    <h3 class="c-teaserGrid_header">Dress Code</h3>
-                    <p>gibt’s nicht – kommt, wie ihr euch wohlfühlt! 😄</p>
+                    <h3 class="c-teaserGrid_header" id="dresscode">Dress Code</h3>
+                    <p>Kein Zwang, keine Regeln – kommt einfach, wie ihr euch am wohlsten fühlt! 😄</p>
                   </div>
-                  <div class="c-teaserGrid_img"> <img src="svg/Strau.svg"></div>
+                  <div class="c-teaserGrid_img"> <img src="svg/Schleife.svg"></div>
                 </div>
-                <div class="c-teaserGrid_item -dancingAnimation">
-                  <div class="c-teaserGrid_img"> <img src="svg/Paar.svg" style="height:200px;"></div>
+                <div class="c-teaserGrid_item -dancingAnimation fade-in">
+                  <div class="c-teaserGrid_img"> <img src="svg/Paar.svg" style="height:200px; filter: invert(1);"></div>
                 </div>
                 <div class="c-teaserGrid_item">
                   <div class="c-teaserGrid_body"> 
-                    <h3 class="c-teaserGrid_header">Geschenke</h3>
-                    <p>Wir freuen uns über Geldgeschenke 💛</p>
+                    <h3 class="c-teaserGrid_header" id="gifts">Geschenke</h3>
+                    <p>Eure Anwesenheit ist das größte Geschenk! Wenn ihr trotzdem etwas mitbringen möchtet, freuen wir uns über Geldgeschenke.</p>
                   </div>
                   <div class="c-teaserGrid_img"><img src="svg/Strau.svg"></div>
                 </div>
@@ -116,11 +154,11 @@
         <section class="c-section -bgPrimaryLight" id="location">
           <div class="c-section_lyt">
             <div class="c-teaserIT"> 
-              <div class="c-teaserIT_body"> 
+              <div class="c-teaserIT_body fade-in"> 
                 <h2>Zeitplan</h2>
-                <h3 class="u-font -copper">(vorrübergehend)</h3>
+                <h3 class="u-font -copper">(provisorisch)</h3>
               </div>
-              <div class="c-teaserIT_img">
+              <div class="c-teaserIT_img fade-in">
                 <ul>
                   <li> 01.05.2026 Einladung spätestens annehmen</li>
                   <li> 17.09.2025 Anfahrt </li>
@@ -134,18 +172,17 @@
       </div>
     </main>
     <a class="g-btn -rvsp" href="#rsvp">RSVP</a>
-    <footer class="g-footer fadeInUp-animation" id="rsvp">
+    <footer class="g-footer fadeInUp-animation fade-in" id="rsvp">
       <div class="g-footer_lyt"><img class="g-footer_deco" src="svg/Briefe.svg" alt="">
         <div class="g-footer_content">
           <div class="g-footer_title">
             <h2>RSVP</h2>
-            <p class="-big">Bitte gebt uns bis zum <strong>01.05.2026</strong> Bescheid, ob ihr dabei seid!</p>
+            <p class="-big">Bitte gib uns bis zum <strong>01.05.2026</strong> Bescheid, ob du dabei bist!</p>
           </div>
           <div class="g-footer_contact">
             <p>Tami / Lukas </p>
             <p>Handynummer: 0110/3994394934</p>
-            <p>Email: 39943993449</p>
-            <p>Whats App Gruppe</p>
+            <p>Link zu WhatsApp Community</p>
             <div class="g-footer_cta"><a class="g-btn" href="https://wa.me/491231234567?text=Hallo%20[Name]%2C%20wir%20kommen%20zu%20%5BAnzahl%5D%20Personen.%20Namen%20der%20G%C3%A4ste%3A%20%5Bhier%20eintragen%5D%20%F0%9F%98%8A" target="_blank">Ja Ich komme</a>
 <a class="g-btn" href="https://wa.me/491231234567?text=Hallo%20[Name]%2C%20wir%20kommen%20zu%20%5BAnzahl%5D%20Personen.%20Namen%20der%20G%C3%A4ste%3A%20%5Bhier%20eintragen%5D%20%F0%9F%98%8A" target="_blank">X Ich komme nicht</a>
             </div>

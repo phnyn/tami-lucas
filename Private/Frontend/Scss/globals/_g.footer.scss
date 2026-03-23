@@ -1,5 +1,4 @@
 .g-footer {
-    @include section-space-bg;
     background-color: $accent;
     color: $white;
     margin: 0;
@@ -12,6 +11,8 @@
 }
 
 .g-footer_lyt {
+    @include section-space-bg;
+    padding-block: 80px;
     max-width: $page-width;
     margin: 0 auto;
     text-align: center;
@@ -24,18 +25,30 @@
 
     @include mq(tls) {
         flex-direction: row;
+        padding-inline: 0;
     }
 }
 
 .g-footer_title {
+
+    h2 + .-big{
+        margin-top: 44px;
+    }
+
     h3 {
         font-family: $font-copperplate;
+    }
+
+    strong {
+        text-decoration: underline;
+        color:$primary;
     }
 }
 
 .g-footer_body {
     display: flex;
     flex-direction: row;
+
 }
 
 .g-footer_cta {
@@ -58,12 +71,15 @@
         right: 0;
         animation: wiggle-revert 3s infinite;
     }
-    opacity: 0.5;
-
+    opacity: 0.4;
 
     @include mq(tls) {
         position: relative;
-        opacity: 1;
+        opacity: 8;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto
     }
 }
 

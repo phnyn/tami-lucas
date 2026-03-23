@@ -28,8 +28,15 @@ domReady(() => {
     
     // initialise your imported component here
     headerSticky();
-    console.log('hello');
     dialogs();
+
+    const componentfadeIn = document.querySelectorAll('.fade-in');
+    if (componentfadeIn.length > 0) {
+        import('./components/fadeIn').then(({ default: fadeIn }) => {
+            fadeIn();
+            return null;
+        });
+    }
 
     // for dynamic/lazy loading of your component use this example
     const componentAccordion = document.querySelectorAll('.js-accordion');
@@ -44,30 +51,6 @@ domReady(() => {
     if (componentSlider.length > 0) {
         import('./components/slider').then(({ default: slider }) => {
             slider();
-            return null;
-        });
-    }
-
-    const componentSelect = document.querySelectorAll('.js-select');
-    if (componentSelect.length > 0) {
-        import('./components/select').then(({ default: select }) => {
-            select();
-            return null;
-        });
-    }
-
-    const componentCopyURL = document.querySelectorAll('.js-copyURL');
-    if (componentSelect.length > 0) {
-        import('./components/copyURL').then(({ default: copyURL }) => {
-            copyURL();
-            return null;
-        });
-    }
-
-    const componentflipCard = document.querySelectorAll('.js-flipCard');
-    if (componentSelect.length > 0) {
-        import('./components/flipCard').then(({ default: flipCard }) => {
-            flipCard();
             return null;
         });
     }

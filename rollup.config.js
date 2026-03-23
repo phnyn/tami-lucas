@@ -56,10 +56,10 @@ export default [{
         //     exclude: 'node_modules/core-js/**',
         // }),
         commonjs(),
-        isProduction && strip(),
-        isProduction && terser(),
-        isProduction && analyze({
-            summaryOnly: true
-        }),
+        // isProduction && strip(),
+        // isProduction && terser(),
+        // isProduction && analyze({
+        //     summaryOnly: true
+        // }),
     ]
 }];

@@ -1,1 +1,0 @@
-function n(n,t,s){const l=document.createElement(n);return""!=t&null!=t&&(Array.isArray(t)?l.classList.add(...t):"string"==typeof t&&l.classList.add(...t.split(" "))),null!=s&null!=s&&(l.innerHTML=s),l}export{n as g};

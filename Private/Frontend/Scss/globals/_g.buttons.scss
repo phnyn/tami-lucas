@@ -10,24 +10,47 @@
         margin-top: 16px;
     }
 
+    &:hover{
+        background-color: $accent;
+        color: $primary;
+    }
+
     &.-rvsp {
         padding: 4px;
-        background-color: white;
+        background-color: $primaryLight;
         position: fixed;
         bottom: 24px;
         right: 24px;
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: rgb(0 0 0 / 0.05) 0 0 8px;
+        box-shadow: rgb(0 0 0 / 0.05) 0 0 10px;
         letter-spacing: 1.5px;
         text-transform: uppercase;
-        border: 1px solid white;
-        outline: 1px solid white;
+        border: 1px solid $accent;
+        outline: 2px solid $accent;
         outline-offset: 2px;
-        font-size: 20px;
+        font-size: 24px;
+
+        animation: bounce 3s ease-in infinite;
+
+        &:hover {
+            background-color: $primary;
+            color: $accent;
+        }
+
     }
+}
+
+@keyframes bounce {
+    70% { transform:translateY(0%); outline-offset: 3px; outline-width: 3px; }
+    80% { transform:translateY(-15%); }
+    90% { transform:translateY(0%); }
+    95% { transform:translateY(-7%); }
+    97% { transform:translateY(0%); }
+    99% { transform:translateY(-3%); }
+    100% { transform:translateY(0); outline-offset: 2px;  }
 }

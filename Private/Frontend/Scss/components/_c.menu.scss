@@ -2,9 +2,16 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    font-size: 3rem;
+    width: fit-content;
+    background-color: rgba($primary, .3);
+    font-family: $font-copperplate;
 
     @include mq(d) {
         flex-direction: row;
         justify-content: right;
+        font-size: 1.5rem;
+        margin-left: auto;
+        text-transform: uppercase;
     }
 }
