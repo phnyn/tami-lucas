@@ -24,6 +24,14 @@ label,
 input[type="text"],
 input[type="password"],
 input[type="email"] {
+    height: 42px;
+    border: 1px solid $accent;
+
+    &:focus-visible {
+        outline-style: solid;
+        outline-width: 2px;
+        outline-color: $accent;
+    }
 }
 
 textarea {

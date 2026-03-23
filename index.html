@@ -1,17 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="-landing">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Landing Page</title>
+<link rel="stylesheet" href="/Public/Styles/main.css"/>
 </head>
 <body>
-<h1>Welcome!</h1>
-<p>Enter username and password:</p>
-<input id="username" placeholder="Username">
-<input id="password" type="password" placeholder="Password">
-<button onclick="login()">Login</button>
-<p id="error" style="color:red;"></p>
+<div class="c-landing">
+  <div class="c-landing_body">
+    <h1 class="c-landing_title u-font -thymesion"><span>Tami<span class="u-font -core"> & &nbsp;</span></span><span> Lucas</span></h1>
+    <h2 class="h-h3 u-font -quinoa">wollen heiraten</h2>
+
+    <p>Du bist eingeladen</p>
+    <div class="c-landing_form">
+      <input id="username" type="text" placeholder="Username">
+      <input id="password" type="password" placeholder="Passwort">
+      <button class="g-btn" onclick="login()">Login</button>
+      <p id="error" style="color:red;"></p>
+    </div>
+  </div>
+
+</div>
 
 <script>
 async function login() {
@@ -25,7 +35,7 @@ async function login() {
     if(res.status === 200) {
       window.location.href = '/protected'; // or show content inline
     } else if(res.status === 401) {
-      document.getElementById('error').textContent = 'Wrong username or password';
+      document.getElementById('error').textContent = 'Falsche Logindaten';
     } else {
       document.getElementById('error').textContent = 'Server error';
     }

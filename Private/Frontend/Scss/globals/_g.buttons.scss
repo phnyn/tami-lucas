@@ -4,6 +4,7 @@
     padding: 8px 16px;
     border-radius: 4px;
     color: $accent;
+    border: 0;
 
     * + & {
         margin-top: 16px;

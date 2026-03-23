@@ -2,6 +2,10 @@ html {
     overflow-y: scroll;
     min-height: 100%;
     background-color: $primary;
+
+    &.-landing {
+        background-color: $primaryLight;
+    }
 }
 
 img {

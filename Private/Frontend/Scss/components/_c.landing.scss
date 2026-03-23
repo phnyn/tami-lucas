@@ -1,0 +1,113 @@
+.c-landing {
+    max-width: $page-width;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.c-landing_body {
+    // Base background
+    background-color: $primary;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: var(--s);
+    box-sizing: border-box;
+    gap: 12px;
+    max-width: 962px;
+
+    // --s controls scallop size dynamically (responsive)
+    --s: min(5vw, 30px); // scales with viewport, max 30px
+
+    // Rounded edges (for smoother masking)
+    border-radius: calc(3.5 * var(--s));
+
+    // Transparent border for mask alignment
+    border: var(--s) solid #0000;
+    background: $primary border-box;
+
+    // Mask for scallops on all sides
+    mask: 
+        radial-gradient(calc(sqrt(2)*var(--s)), #000 calc(100% - 1px), #0000),
+        conic-gradient(#000 0 0) content-box,
+        radial-gradient(calc(sqrt(2)*var(--s)), #0000 100%, #000 calc(100% + 1px)) 
+        var(--s) var(--s) padding-box;
+    mask-size: calc(var(--s) * 4) calc(var(--s) * 4);
+    mask-repeat: repeat;
+
+    // Ensure compatibility across browsers
+    -webkit-mask: 
+        radial-gradient(calc(sqrt(2)*var(--s)), #000 calc(100% - 1px), #0000),
+        conic-gradient(#000 0 0) content-box,
+        radial-gradient(calc(sqrt(2)*var(--s)), #0000 100%, #000 calc(100% + 1px)) 
+        var(--s) var(--s) padding-box;
+    -webkit-mask-size: calc(var(--s) * 4) calc(var(--s) * 4);
+    -webkit-mask-repeat: repeat;
+
+
+    // Responsive adjustments
+    @include mq(tls) {
+        --s: min(5vw, 30px); // smaller scallops on smaller screens
+        margin: 20px;
+        min-height: 60vh;
+        padding: var(--s);
+    }
+}
+
+.c-landing_form {
+
+    button{
+        border-radius: 0;
+        border: 1px solid $white;
+    }
+}
+
+.c-landing_title {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    font-size: 3.25rem;
+    row-gap: 10px;
+
+    span:first-of-type{
+        grid-column: 1/span 2;
+        grid-row: 1;
+        justify-self: center;
+    }
+
+    span:last-of-type{
+        grid-column: 2/span 2;
+        grid-row: 2;
+        justify-self: center;
+    }
+    @include mq(tp){
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    @include mq(tls){
+        width: fit-content;
+        font-size: 4rem;
+    }
+}
+
+.c-landing_form {
+    display: flex;
+    flex-direction: column;
+            gap: 4px;
+
+
+    @include mq(tls){
+        flex-direction: row;
+    }
+
+    button {
+        margin:0;
+    }
+}
