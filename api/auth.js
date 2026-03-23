@@ -1,5 +1,7 @@
+import fs from 'fs';
+import path from 'path';
+
 export default function handler(req, res) {
-  // Benutzername/Passwort aus Environment
   const USER = process.env.AUTH_USER;
   const PASS = process.env.AUTH_PASS;
 
@@ -12,6 +14,13 @@ export default function handler(req, res) {
     return;
   }
 
-  // Auth erfolgreich → geschützte Seite ausliefern
-  res.status(200).sendFile('protected.html', { root: './' });
+  // Read protected.html manually
+  const filePath = path.join(process.cwd(), 'protected.html');
+  try {
+    const html = fs.readFileSync(filePath, 'utf8');
+    res.status(200).setHeader('Content-Type', 'text/html');
+    res.end(html);
+  } catch (err) {
+    res.status(500).end('Internal Server Error');
+  }
 }
