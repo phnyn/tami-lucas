@@ -34,6 +34,7 @@
         outline: 2px solid $accent;
         outline-offset: 2px;
         font-size: 24px;
+        z-index: 10;
 
         animation: bounce 3s ease-in infinite;
 
