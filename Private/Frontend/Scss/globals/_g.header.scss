@@ -1,7 +1,7 @@
 .g-header {
     height: 60px;
     width: 100%;
-    background: transparent;
+    background: $white;
     z-index: 10;
     padding: 0 clamp-calc(30px, 60px);
     display: flex;
@@ -26,7 +26,7 @@
     .-scrolled & {
         padding-inline: clamp-calc(30px, 60px);
         position: fixed;
-        top: 15px;
+        top: 0;
         max-width: $page-width;
         margin: 0 auto;
 
@@ -39,4 +39,8 @@
 .g-header_mobile {
     display: flex;
     justify-content: right;
+
+    .o-dialog_header button {
+        text-align: right;
+    }
 }

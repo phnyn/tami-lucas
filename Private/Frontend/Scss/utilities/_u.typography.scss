@@ -36,6 +36,10 @@
     color: $white;
 }
 
+.u-t-c.-accent {
+    color: $accent;
+}
+
 // override size
 .u-t-fontsize.-s {
     font-size: clamp-calc(12px, 14px);
