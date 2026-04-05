@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 60px;
+    padding: clamp-calc(40px,60px);
     background-color: $primary;
 
     h1 {
@@ -16,6 +16,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
+        width: 100%;
 
         span:first-of-type {
             grid-row: 1;
@@ -43,4 +44,9 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+
+    h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
 }

@@ -39,29 +39,46 @@ h1, .h-h1 {
 
 h2,
 .h-h2 {
-    font-size: 3.815rem;
+    font-size: 3rem;
+
+    @include mq(tls){
+        font-size: 3.815rem;
+    }
 }
 
 h3,
 .h-h3 {
-    font-size: 3.052rem;
+    font-size:2.5rem;
+    @include mq(tls){
+        font-size: 3.052rem;
+    }
 }
 
 h4,
 .h-h4 {
-    font-size: 2.441rem;
+    font-size: 2rem;
+    @include mq(tls){
+        font-size: 2.441rem;
+    }
 }
 
 h5,
 .h-h5 {
-    font-size: 1.953rem;
+    font-size: 1.5rem;
+    @include mq(tls){
+        font-size: 1.953rem;
+    }
 }
 
 
 p {
     margin-bottom: 0;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.1;
+
+    @include mq(tls){
+        font-size: 1.125rem;
+    }
 
     &.-small {
         font-size: 0.8rem;

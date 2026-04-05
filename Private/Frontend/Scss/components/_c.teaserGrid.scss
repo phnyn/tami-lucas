@@ -2,6 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    h3.-smaller {
+
+        @include mq($until: tls){
+                    font-size: 2.4rem;
+        }
+    }
 }
 
 .c-teaserGrid_wrap{

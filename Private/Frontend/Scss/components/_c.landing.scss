@@ -20,34 +20,35 @@
     box-sizing: border-box;
     gap: 12px;
     max-width: 962px;
+    border-radius: 40px;
 
-    // --s controls scallop size dynamically (responsive)
-    --s: min(5vw, 30px); // scales with viewport, max 30px
+    // // --s controls scallop size dynamically (responsive)
+    // --s: min(5vw, 30px); // scales with viewport, max 30px
 
-    // Rounded edges (for smoother masking)
-    border-radius: calc(3.5 * var(--s));
+    // // Rounded edges (for smoother masking)
+    // border-radius: calc(3.5 * var(--s));
 
-    // Transparent border for mask alignment
-    border: var(--s) solid #0000;
-    background: $primary border-box;
+    // // Transparent border for mask alignment
+    // border: var(--s) solid #0000;
+    // background: $primary border-box;
 
-    // Mask for scallops on all sides
-    mask: 
-        radial-gradient(calc(sqrt(2)*var(--s)), #000 calc(100% - 1px), #0000),
-        conic-gradient(#000 0 0) content-box,
-        radial-gradient(calc(sqrt(2)*var(--s)), #0000 100%, #000 calc(100% + 1px)) 
-        var(--s) var(--s) padding-box;
-    mask-size: calc(var(--s) * 4) calc(var(--s) * 4);
-    mask-repeat: repeat;
+    // // Mask for scallops on all sides
+    // mask: 
+    //     radial-gradient(calc(sqrt(2)*var(--s)), #000 calc(100% - 1px), #0000),
+    //     conic-gradient(#000 0 0) content-box,
+    //     radial-gradient(calc(sqrt(2)*var(--s)), #0000 100%, #000 calc(100% + 1px)) 
+    //     var(--s) var(--s) padding-box;
+    // mask-size: calc(var(--s) * 4) calc(var(--s) * 4);
+    // mask-repeat: repeat;
 
-    // Ensure compatibility across browsers
-    -webkit-mask: 
-        radial-gradient(calc(sqrt(2)*var(--s)), #000 calc(100% - 1px), #0000),
-        conic-gradient(#000 0 0) content-box,
-        radial-gradient(calc(sqrt(2)*var(--s)), #0000 100%, #000 calc(100% + 1px)) 
-        var(--s) var(--s) padding-box;
-    -webkit-mask-size: calc(var(--s) * 4) calc(var(--s) * 4);
-    -webkit-mask-repeat: repeat;
+    // // Ensure compatibility across browsers
+    // -webkit-mask: 
+    //     radial-gradient(calc(sqrt(2)*var(--s)), #000 calc(100% - 1px), #0000),
+    //     conic-gradient(#000 0 0) content-box,
+    //     radial-gradient(calc(sqrt(2)*var(--s)), #0000 100%, #000 calc(100% + 1px)) 
+    //     var(--s) var(--s) padding-box;
+    // -webkit-mask-size: calc(var(--s) * 4) calc(var(--s) * 4);
+    // -webkit-mask-repeat: repeat;
 
     h1{
         font-size: clamp-calc(3.75rem, 4.5rem);
