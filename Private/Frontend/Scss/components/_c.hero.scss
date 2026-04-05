@@ -55,7 +55,7 @@
     &::after{
         content: "";
         background-image: url("../svg/armor.svg");
-        height: 100px;
+        height: 80px;
         display: block;
         position: absolute;
         background-repeat: no-repeat;
@@ -65,8 +65,14 @@
         top: 10px;
         right: 10px;
         filter: grayscale(1) invert(1);
-        width: 100px;
+        width: 80px;
         animation: wiggle 4s infinite;
+
+        @include mq(tls){
+            width: 100px;
+                    height: 100px;
+
+        }
     }
 }
 
