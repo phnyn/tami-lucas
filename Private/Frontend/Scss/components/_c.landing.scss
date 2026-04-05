@@ -23,7 +23,7 @@
     border-radius: 40px;
 
     // // --s controls scallop size dynamically (responsive)
-    // --s: min(5vw, 30px); // scales with viewport, max 30px
+    --s: min(5vw, 30px); // scales with viewport, max 30px
 
     // // Rounded edges (for smoother masking)
     // border-radius: calc(3.5 * var(--s));
