@@ -73,9 +73,9 @@
 
     @include mq($until: tls){
 
-    .-date .-top &, .-date .-bottom &  {
-        transform: rotate(90deg);
-    }
+    // .-date .-top &, .-date .-bottom &  {
+    //     transform: rotate(90deg);
+    // }
 }
 }
 
