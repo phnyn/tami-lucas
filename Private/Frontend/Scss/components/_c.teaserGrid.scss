@@ -71,12 +71,17 @@
     width: 100%;
     min-height: 100px;
 
-    @include mq($until: tls){
 
-    // .-date .-top &, .-date .-bottom &  {
-    //     transform: rotate(90deg);
-    // }
-}
+        .-team & {
+
+            filter: grayscale(1);
+            height: 150px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 4px;
+        }
+
 }
 
 .c-teaserGrid_header {

@@ -10,6 +10,8 @@
     padding: clamp-calc(40px,60px);
     background-color: $primary;
 
+    gap: 12px;
+
     h1 {
         font-size: clamp-calc(60px,120px);
         font-family: $font-scarlett;
@@ -39,6 +41,35 @@
 
 }
 
+.c-hero_img {
+    aspect-ratio: 5/3;
+    max-height: 300px;
+    position: relative;
+
+    img{
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+
+    &::after{
+        content: "";
+        background-image: url("../svg/armor.svg");
+        height: 100px;
+        display: block;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        z-index: 10;
+        top: 10px;
+        right: 10px;
+        filter: grayscale(1) invert(1);
+        width: 100px;
+        animation: wiggle 4s infinite;
+    }
+}
+
 .c-hero_text {
     display: flex;
     flex-direction: column;
@@ -49,4 +80,17 @@
         font-size: 3rem;
         text-align: center;
     }
+}
+
+.c-hero_rvsp {
+    display: flex;
+}
+
+@keyframes wiggle {
+    0% { transform:  rotate(-10deg); }
+    60% { transform: rotate(10deg);}
+    75% { transform: rotate(0deg); }
+    80% { transform:  rotate(5deg); }
+    95% { transform: rotate(0deg); }
+    100% { transform: rotate(-9deg); }
 }
