@@ -2,6 +2,7 @@ html {
     font-family: $text-font;
     color: $accent;
     font-size: 1.125rem;
+    font-weight: 300;
 }
 
 a {
@@ -9,7 +10,8 @@ a {
         margin-top: 18px;
     }
 
-    color: #190850;
+    //color: #190850;
+    color: $accent;
 
     &:hover {
         color: $black;
@@ -52,6 +54,10 @@ h3,
     font-size:2.5rem;
     @include mq(tls){
         font-size: 3.052rem;
+
+        &.-smaller {
+            font-size: 2.4rem;
+        }
     }
 }
 
