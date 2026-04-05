@@ -1,7 +1,7 @@
 .g-header {
     height: 60px;
     width: 100%;
-    background: $white;
+    background: $primaryLight;
     z-index: 10;
     padding: 0 clamp-calc(30px, 60px);
     display: flex;
@@ -13,13 +13,14 @@
     transition: all 0.3s ease-in-out;
     opacity: 1;
     position: relative;
+
 }
 
 .g-header_lyt {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: $page-width;
+    // max-width: $page-width;
     margin: 0;
     justify-content: right;
 
@@ -27,11 +28,14 @@
         padding-inline: clamp-calc(30px, 60px);
         position: fixed;
         top: 0;
-        max-width: $page-width;
+        // max-width: $page-width;
         margin: 0 auto;
 
         @include mq(d) {
             padding: 0;
+            backdrop-filter: blur(4px);
+            background-color: rgba($white, 0.25);
+            border-bottom: 1px solid rgba($primaryLight, 0.5);;
         }
     }
 }
@@ -43,4 +47,9 @@
     .o-dialog_header button {
         text-align: right;
     }
+}
+
+.g-header_desktop {
+    width: 100%;
+    // max-width: $page-width;
 }

@@ -1,17 +1,27 @@
+.c-menu {
+    display: flex;
+
+    @include mq(d){
+        justify-content: right;
+        max-width: $page-width;
+        margin: 0 auto;
+    }
+}
+
 .c-menu_list {
     display: flex;
     flex-direction: column;
     gap: 10px;
     font-size: 3rem;
     width: fit-content;
-    background-color: rgba($primary, .3);
-    font-family: $font-copperplate;
+    // background-color: rgba($primary, .3);
+    font-family: $font-core;
 
     @include mq(d) {
         flex-direction: row;
         justify-content: right;
         font-size: 1.5rem;
-        margin-left: auto;
+        margin: 0;
         text-transform: uppercase;
     }
 }
