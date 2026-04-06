@@ -9,6 +9,12 @@
                     font-size: 2.4rem;
         }
     }
+
+    h2 {
+        overflow-wrap: break-word;
+        hyphens: auto;
+        word-break: break-word;
+    }
 }
 
 .c-teaserGrid_wrap{

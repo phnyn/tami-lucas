@@ -3,6 +3,9 @@ html {
     color: $accent;
     font-size: 1.125rem;
     font-weight: 300;
+        word-wrap: break-word; /* alte Syntax */
+    overflow-wrap: break-word; /* moderne Syntax */
+    hyphens: manual;     
 }
 
 a {
