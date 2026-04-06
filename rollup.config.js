@@ -18,7 +18,7 @@ export default [{
     output: [
         {
             format: 'es',
-            dir: isProduction ? 'public/scripts/' : 'public/scripts/Dev',
+            dir: isProduction ? 'public/scripts/' : 'public/scripts/',
             sourcemap: isProduction ? false : true,
         },
 // 2. If IE11 support is required, comment in the following output format block
@@ -56,10 +56,10 @@ export default [{
         //     exclude: 'node_modules/core-js/**',
         // }),
         commonjs(),
-        // isProduction && strip(),
-        // isProduction && terser(),
-        // isProduction && analyze({
-        //     summaryOnly: true
-        // }),
+        isProduction && strip(),
+        isProduction && terser(),
+        isProduction && analyze({
+            summaryOnly: true
+        }),
     ]
 }];
