@@ -42,7 +42,7 @@ export default [{
         json(),
         copy({
             targets: [
-                { src: 'assets/SVG/*', dest: 'public/svg' },
+                { src: 'assets/img/*', dest: 'public/img/' },
                 { src: 'assets/Fonts/*', dest: 'public/fonts' }
             ]
         }),

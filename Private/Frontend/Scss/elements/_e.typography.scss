@@ -83,6 +83,7 @@ p {
     font-size: 1rem;
     line-height: 1.1;
     z-index: 10;
+    max-width: 740px;
 
     @include mq(tls){
         font-size: 1.125rem;

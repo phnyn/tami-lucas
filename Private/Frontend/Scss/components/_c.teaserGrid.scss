@@ -20,7 +20,7 @@
     @include mq(tls) {
         flex-direction: row;
         justify-content: space-evenly;
-        gap: 40px;
+        //gap: 40px;
         width: 100%;
     }
 }
@@ -64,13 +64,16 @@
 .c-teaserGrid_body {
     p {
         margin-top: 12px;
+
+        @include mq(tls){
+            margin-top: 24px;
+        }
     }
 }
 
 .c-teaserGrid_img img {
     width: 100%;
     min-height: 100px;
-
 
         .-team & {
 
@@ -80,6 +83,10 @@
             border-radius: 50%;
             object-fit: cover;
             margin-top: 4px;
+        }
+
+        .-team.-borders & {
+            border: 1px solid $accent;
         }
 
 }

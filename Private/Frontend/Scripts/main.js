@@ -30,6 +30,14 @@ domReady(() => {
     headerSticky();
     dialogs();
 
+    const componentHero = document.querySelectorAll('.c-hero');
+    if (componentHero.length > 0) {
+        import('./components/heroGallery').then(({ default: hero }) => {
+            hero();
+            return null;
+        });
+    }
+
     const componentfadeIn = document.querySelectorAll('.fade-in');
     if (componentfadeIn.length > 0) {
         import('./components/fadeIn').then(({ default: fadeIn }) => {
@@ -47,11 +55,11 @@ domReady(() => {
         });
     }
 
-    const componentSlider = document.querySelectorAll('.js-imageSlider');
-    if (componentSlider.length > 0) {
-        import('./components/slider').then(({ default: slider }) => {
-            slider();
-            return null;
-        });
-    }
+    // const componentSlider = document.querySelectorAll('.js-imageSlider');
+    // if (componentSlider.length > 0) {
+    //     import('./components/slider').then(({ default: slider }) => {
+    //         slider();
+    //         return null;
+    //     });
+    // }
 });

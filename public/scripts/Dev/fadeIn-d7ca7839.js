@@ -1,4 +1,4 @@
-export default () => {
+var fadeIn = () => {
     // console.log('fadeIn.js');
     // const elements = document.querySelectorAll('.fade-in');
 
@@ -17,3 +17,6 @@ export default () => {
     //     observer.observe(element);
     // });
 };
+
+export { fadeIn as default };
+//# sourceMappingURL=fadeIn-d7ca7839.js.map

@@ -129,9 +129,17 @@ domReady(() => {
     headerSticky();
     dialogs();
 
+    const componentHero = document.querySelectorAll('.c-hero');
+    if (componentHero.length > 0) {
+        import('./heroGallery-1a938826.js').then(({ default: hero }) => {
+            hero();
+            return null;
+        });
+    }
+
     const componentfadeIn = document.querySelectorAll('.fade-in');
     if (componentfadeIn.length > 0) {
-        import('./fadeIn-bebe33db.js').then(({ default: fadeIn }) => {
+        import('./fadeIn-d7ca7839.js').then(({ default: fadeIn }) => {
             fadeIn();
             return null;
         });
@@ -146,12 +154,12 @@ domReady(() => {
         });
     }
 
-    const componentSlider = document.querySelectorAll('.js-imageSlider');
-    if (componentSlider.length > 0) {
-        import('./slider-0789eb84.js').then(({ default: slider }) => {
-            slider();
-            return null;
-        });
-    }
+    // const componentSlider = document.querySelectorAll('.js-imageSlider');
+    // if (componentSlider.length > 0) {
+    //     import('./components/slider').then(({ default: slider }) => {
+    //         slider();
+    //         return null;
+    //     });
+    // }
 });
 //# sourceMappingURL=main.js.map
