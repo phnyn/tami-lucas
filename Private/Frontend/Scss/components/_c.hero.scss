@@ -43,23 +43,23 @@
 
 .c-hero_imgSlider{
     aspect-ratio: 3/2;
-    max-width: 500px;
+    max-width: 600px;
     position: relative;
     width: 100%;
 
     &::before{
         content: "";
-        width: 110%;
-        height: 110%;
+        width: 116%;
+        height: 116%;
         position: absolute;
-        background-image: url("../img/svg/border1.svg");
+        background-image: url("../img/svg/border-hoch.svg");
         filter: invert(1);
         z-index: 10;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        top: -5%;
-        left: -5%;
+        top: -8%;
+        left: -8%;
         opacity: .75;
     }
 
@@ -67,7 +67,7 @@
     &::after{
         content: "";
         background-image: url("../img/svg/armor.svg");
-        height: 60px;
+        height: 50px;
         display: block;
         position: absolute;
         background-repeat: no-repeat;
@@ -84,7 +84,7 @@
             width: 100px;
             height: 100px;
             right: -66px;
-            top: 30%;
+            top: 20%;
         }
     }
 }
