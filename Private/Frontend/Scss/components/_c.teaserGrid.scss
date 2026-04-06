@@ -95,6 +95,13 @@
             border: 1px solid $accent;
         }
 
+        .-teamSvg & {
+            height: 174px;
+            border-radius: none;
+            border: 1px solid $accent;
+            width: 150px;
+        }
+
 }
 
 .c-teaserGrid_header {
