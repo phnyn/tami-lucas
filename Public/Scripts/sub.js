@@ -23,3 +23,4 @@ domReady(() => {
     // initialise your imported component here
     dialogs();
 });
+//# sourceMappingURL=sub.js.map
