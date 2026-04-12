@@ -9,10 +9,10 @@
     flex-direction: column;
     padding: clamp-calc(25px,60px);
     background-color: $primary;
-    gap: clamp-calc(24px,40px);
+    gap: clamp-calc(24px,30px);
 
     h1 {
-        font-size: clamp-calc(60px,120px);
+        font-size: clamp-calc(60px,100px);
         font-family: $font-scarlett;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -34,16 +34,15 @@
         @include mq(tls){
             display: flex;
             justify-content: center;
+            margin-top: 40px;
         }
 
     }
-
-    border-bottom: 1px solid green;
 }
 
 .c-hero_imgSlider{
     aspect-ratio: 3/2;
-    max-width: 600px;
+    max-width: 575px;
     position: relative;
     width: 100%;
 
